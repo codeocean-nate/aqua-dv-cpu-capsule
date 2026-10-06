@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# Deployment verification: CPU check. Arguments are passed to dv_check.py
+# (for example --require-data 1 when a data asset must be attached).
+set -euo pipefail
+cd "$(dirname "$0")"
+python3 -u dv_check.py "$@"
